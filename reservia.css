@@ -1,6 +1,651 @@
-/*Medium devices (mobile/tablette, 768px and up)si la largeur de l'appareil est inférieure ou égale à 768px, appliquez le CSS défini 
+/*Medium devices (mobile/tablette, 760px )si la largeur de l'appareil est inférieure ou égale à 768px, appliquez le CSS défini 
 dans ce bloc*/
-@media only screen and (max-width:768px)
+@media only screen and (max-width:760px)
+{
+
+body /*pour que l'ordi ne mette pas une marge en plus sur toute la page*/
+{
+	margin: 0;
+	font-family: Raleway;/* utilisation des polices sur la totalité de la page */
+}
+
+
+.d-justify /*logo entete*/
+{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* logo+entête*/
+
+.projet ul
+{
+    list-style: none;
+    margin:0;
+}
+
+.projet li
+{
+	float: left;
+}
+
+
+.active /*pour bouton hebergements*/
+{
+    border-bottom: 2px solid #0065FC !important;	/*pour qu'il y ait un trait bleu foncé au dessus de hebergements*/
+
+}
+
+.color-act /*pour bouton activites*/
+{
+	color: #000 !important;
+}
+
+.color-inscrire /*pour bouton s'inscrire*/
+{
+	font-weight: bold;
+	width: 50%;
+	
+	position: absolute;
+	left: 240px;/* concerne les marges exterieures */
+}
+
+
+
+nav.projet ul
+    {
+    	display: flex;
+    	flex-direction: row-reverse;
+    }
+
+nav ul 
+    {
+        display: block;
+        position: absolute;
+        top: 0px;
+    }
+
+nav ul li:nth-child(1)
+    {
+        display: block;
+        position: absolute;
+        width: 50%;
+        left: 0rem;
+        top: 6rem;
+    }
+
+    nav ul li:nth-child(2)
+    {
+        display: block;
+        position: absolute;
+        width: 50%;
+        left: 250px;
+        top: 6rem;
+    }
+
+
+
+
+nav.projet a:hover/* une couleur se met dès qu'on survol le mot */
+{
+	color: red;
+	background-color: #F2F2F2; /*lorsqu'on passe dessus un encadrement de couleur grise apparait*/
+	border-top: 2px solid #0065FC; /* taille et couleur bleu foncé du haut du cadre*/
+}
+
+nav.projet a /* characteristiques par défaut */
+{
+	display: block;
+	padding: 30px;
+	color: #0065FC;
+	text-decoration: #0065FC;
+	border-top: 2px solid white;
+}
+
+
+/*section 1 trouvez votre hébergement*/
+
+
+ h1 /*Trouvez votre hébergement*/
+{
+	color: #000000; /*couleur noire*/
+	font-size: 1.6rem;
+	font-weight: bold;
+	margin-left: 20px;
+	padding-top: 150px;
+}
+
+p
+{
+	font-size: 1rem;
+	margin-left: 20px;
+}
+
+
+ .fas.fa-map-marker-alt /*icone recherche*/
+{
+ 	background-color: #F2F2F2;
+  	border-radius: 20px 5px 5px 20px;/* concerne l'arrondi de l'encadrement haut droite bas gauche */
+  	padding: 16px;/* pour grossir le rond*/  
+	margin-left: 20px;
+}
+
+input  /* Marseille, France*/
+{
+    border: 2px #F2F2F2 solid;
+    width: 220px;
+    height: 42px;
+    padding-left: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: -4px;
+}
+
+::placeholder /* couleur noire Marseille, France/ Le pseudo-élément ::placeholder représente le texte de substitution  
+pour un élément <input> ou <textarea>. Cela permet aux développeurs web de personnaliser l'apparence de ce texte.Le texte de 
+substitution est généralement représenté avec une couleur plus claire afin d'indiquer qu'il s'agit d'une suggestion et que ce 
+contenu n'a pas été saisi par l'utilisateur ou par le site même*/
+{
+    color: #000000;/*couleur noire*/
+}
+
+.d-none /*pour ne pas avoir rechercher qui s'affiche*/
+{
+display: none;
+}
+
+.rechercher /*bouton rechercher*/
+{
+    border-radius: 5px 15px 15px 5px;/* concerne l'arrondi de l'encadrement haut droite bas gauche */
+    background-color: #0065FC;
+    color: white;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    font-weight: bold;
+   	margin-left: -5px;
+   	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.filtres /*bloc : filtres economique familial romantique animaux*/
+{
+    display: flex;
+    font-weight: bolder;
+    margin: 40px 0 10px 0;
+}
+
+.titrefiltre /*concerne le mot filtre*/
+{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-weight: bold; /*ne fonctionne pas*/
+	font-size: 1.1rem;
+}
+
+.fi /*bloc : economique familial romantique animaux*/
+{
+    display: flex;
+    flex-wrap: wrap; /*les éléments vont à la ligne lorsqu'il n'y a plus la place*/
+    padding-left: 5px !important; 
+}
+
+.contour /* contour des mots economique familial romantique animaux*/
+{
+    display: flex;
+    align-items: center;
+    border: solid 2px #F2F2F2;
+    border-radius: 25px;
+    background-color: white;
+    margin-right: 35px;
+}
+
+#eco,/*icones billet homme coeur chien */
+#fam,
+#rom,
+#ani 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC; /*couleur de l'icone*/
+    background-color: #DEEBFF; /*couleur du fond du rond*/
+    border-radius: 100%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.fi span /*concerne les mots : economique familial romantique animaux*/
+{
+	display: flex;
+    margin: 10px 15px 10px 10px;
+}
+
+.contour:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+  
+
+i.fas.fa-info /*icone avec plus de 500 logements...*/
+{
+    border: #DEEBFF solid 1px;
+    border-radius: 50%;
+    padding: 9px;
+    color: #0065FC;
+    font-size: 0.7rem;
+	height: 0.7rem;
+    width: 0.7rem;
+    margin-left: 18px;/* concerne les marges exterieures */
+    align-items: center;
+}
+
+/*section2 hebergements+les plus populaires*/
+
+.d-justify
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.d-column
+{
+	display: flex;
+	flex-direction: column-reverse !important;/*afin que les plus populaires apparaissent avant hebergement à Marseille sur mobile*/
+}
+
+h2 /*hebergements à marseille et Les plus populaires et Activités à Marseille*/
+{
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: #000000; /*couleur noire*/
+}
+
+.pop /*les plus populaires et ses 3 vignettes*/
+{
+	width: 110%;
+	background-color: #F2F2F2;
+	color: #000000;/*couleur noire*/	
+	margin-top: 27px;/* concerne les marges exterieures */
+	margin-bottom: 25px;
+}
+
+i.fas.fa-chart-line /*icone plus populaire*/
+{
+	margin-left: 120px; /* concerne les marges exterieures */
+}
+
+.element-droit /*concerne les elements les plus populaires*/
+{	
+	background-color: white;
+	border: 6px white solid;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	margin-left: 20px;/* concerne les marges exterieures */
+	margin-bottom: 37px;
+	margin-top: 30px;
+	box-shadow: 0px 8px 12px #aaa;
+	width: 87%;
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.d-flex /*pour mettre le texte à droite de la photo*/
+{
+	display: flex;
+}
+
+.ph /*photos les plus populaires*/
+{    
+	object-fit: cover; /*l'image sera découpée pour s'adapter*/
+    width: 130px;
+    height: 160px;
+    border-radius: 0 0 0 10px; /* haut droite bas gauche, enlever px quand c'est 0 */	
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/ 
+}
+
+.hotel /*hotels pour hebergements à Marseille*/
+{
+	color: #000000;/*couleur noire*/ 
+	font-size: 1.2rem;  
+	font-weight: bold;
+	margin-left: 12px; /* concerne les marges exterieures  */
+	margin-top: 12px;
+	padding-top: 10px;
+}
+
+.hotels /*hotels pour les plus populaires*/
+{
+	color: #000000;/*couleur noire*/ 
+	font-size: 1.2rem;  
+	font-weight: bold;
+	margin-left: 12px; /* concerne les marges exterieures  */
+	margin-top: 10px;
+	padding-top: 20px;
+}
+
+.mat /*coupure des noms d'hotel, pour les plus populaires*/
+{
+	color: #000000;/*couleur noire, pour les plus populaires*/ 
+	font-size: 1.2rem;  
+	font-weight: bold;
+	margin-left: 12px;
+	padding-top: 10px;
+}
+
+.nuits /*pour les plus populaires*/
+{
+	color: #000000;/*couleur noire*/ 
+	font-size: 1.1rem;
+	margin-left: 12px;
+}
+
+.star /*étoiles pour les plus populaires*/
+{
+	margin-left: 12px; /* pour que le block étoiles ait une marge exterieure gauche tout en restant groupé */
+	padding-top: 36px;
+}
+
+.nuit /*pour hebergements à Marseille*/
+{
+	color: #000000;/*couleur noire*/ 
+	font-size: 1.1rem;
+	margin-left: 12px;
+}
+
+.stars /*étoiles pour hebergements à Marseille*/
+{
+	margin-left: 12px; /* pour que le block étoiles ait une marge exterieure gauche tout en restant groupé */
+	margin-bottom: 5px;
+	padding-top: 36px;
+}
+
+.blue /*blue stars */
+{ 
+    color: #0065FC; 
+    font-size: 0.7rem;
+}
+
+.grey /*grey stars */
+{
+    color:rgb(217,217,217);
+    font-size: 0.7rem;
+}
+
+.habitation /*englobe hebergement à Marseille et ses 6 vignettes hebergement+afficher*/
+{	
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	color: #000000;/*couleur noire*/	
+	width: 100%; /* concerne la longueur du bloc */	
+	padding-right: 1px;/* concerne les marges interieures  */
+	text-align: left;
+	margin-top: 27px;
+	margin-bottom: 25px;
+	margin-right: 2px;
+	margin-left: 10px;
+	padding: 10px; /* concerne les marges interieures  */
+}
+
+
+.main /*englobe les 6 vignettes d'hebergements+afficher*/
+{
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-bottom: 30px;/* concerne les marges interieures bas  */
+}
+
+
+.element /*concerne l'interieur des 6 vignettes hebergements à Marseille*/
+{
+	background-color: white;
+	border: 6px white solid;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */ 
+	margin-bottom: 35px; /* concerne les marges exterieures  haut droite bas gauche, enlever px quand c'est 0 */
+	width: 95%;
+	box-shadow: 0px 8px 12px #aaa;
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.photos /*hebergements à marseilles*/
+{  	
+  	width: 100%;
+  	height: 140px;
+  	object-fit: cover; /*l'image sera découpée pour s'adapter*/
+    border: white solid 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.afficher
+{
+	color: #000000;/*couleur noire*/
+	font-size: 1rem;
+	font-weight: bold;
+	width: 100%;
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+
+
+/*section3 activite a Marseille*/
+
+
+
+.conteneur1/* concerne l'alignement activite à Marseille */
+{
+	display: flex;
+	flex-direction: column;
+	color: #000000;/*couleur noire*/	
+	text-align: left;	
+	width: 100%;
+	margin-left: 20px; /*marges exterieures*/
+	margin-right: 18px;
+}
+
+
+.element10 /*Vieux Port et Parc National des Calanques*/
+{  
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 25px;/* concerne les marges exterieures bas */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.phot /*photo elements 10-13*/
+{
+  	width: 360px;
+  	height: 150px;
+  	object-fit: cover; /*l'image sera découpée pour s'adapter*/   
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;  
+}
+
+.lieu /*noms des lieux pour activites*/
+{
+	color: #000000;/*couleur noire*/ 
+	font-size: 1.1em;  
+	font-weight: bold;
+	padding-left: 10px;/* concerne les marges interieures gauche  */
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.element11 /*Fort de Pomègues*/
+{	
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 25px;/* concerne les marges exterieures  */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.pho /*photo elements 11-12-14-15*/
+{
+  	width: 360px;
+  	height: 150px;
+  	object-fit: cover; /*l'image sera découpée pour s'adapter*/   
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;  
+}    
+
+.element12 /*Iles du Frioul*/
+{	
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 25px;/* concerne les marges exterieures  */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.element13 /*Parc National des Calanques*/
+{	
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 25px;/* concerne les marges exterieures  */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+.element14 /*Notre-Dame-de-La-Garde*/
+{	
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 25px; /* concerne les marges exterieures */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+
+.element15 /*Parc Longchamp*/
+{	
+	box-shadow: 0px 8px 12px #aaa;
+	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
+	align-self: baseline;/*placement dans la box*/
+	margin-bottom: 55px;/* concerne les marges exterieures  */
+	padding-bottom: 3px;/* concerne  marge interieure bas  */
+	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+}
+
+/*section footer*/
+
+footer
+{
+	background-color: #F2F2F2; 
+	flex-direction: column;
+    width: 110%;
+}
+
+
+.conteneur2 /* concerne l'alignement footer */
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 32px;
+	padding-bottom: 20px;
+}
+
+h3 /*A propos et Nos hébergements et Assistance*/
+{
+	color: #000000; /*couleur noire*/
+	margin-bottom: 30px;
+}
+
+.fonc:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.cond:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.don:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.cha:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.sou:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.cen:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+.nou:hover  /*une couleur se met dès qu'on survol le mot à l'interieur de l'encadrement, un encadrement de couleur grise apparait */
+{
+    color: #0065FC;
+    background-color: #F2F2F2;
+    cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
+    qui indique un lien,généralement c'est une main.*/
+
+}
+
+
+}
+
+
+
+/*Medium devices (mobile/tablette, min 761 max 1000px )si la largeur de l'appareil est inférieure ou égale à 768px, appliquez le CSS défini 
+dans ce bloc*/
+@media only screen and (min-width:761px) and (max-width: 1000px)
 {
 
 body /*pour que l'ordi ne mette pas une marge en plus sur toute la page*/
@@ -643,7 +1288,7 @@ h3 /*A propos et Nos hébergements et Assistance*/
 
 /*Medium devices (tablette, entre 768px and 1200)si la largeur de l'appareil est supérieur à 768px et inférieur à 1200px, appliquez le CSS défini 
 dans ce bloc*/
-@media only screen and (min-width:768px) and (max-width: 1200px)
+@media only screen and (min-width:1000px) and (max-width: 1200px)
 {
 
 body /*pour que l'ordi ne mette pas une marge en plus sur toute la page*/
