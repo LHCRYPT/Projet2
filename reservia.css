@@ -643,7 +643,7 @@ h3 /*A propos et Nos hébergements et Assistance*/
 
 
 
-/*Medium devices (mobile/tablette, min 761 max 1000px )si la largeur de l'appareil est inférieure ou égale à 768px, appliquez le CSS défini 
+/*Medium devices (tablette, min 761 max 1000px )si la largeur de l'appareil est inférieure ou égale à 768px, appliquez le CSS défini 
 dans ce bloc*/
 @media only screen and (min-width:761px) and (max-width: 1000px)
 {
@@ -657,97 +657,61 @@ body /*pour que l'ordi ne mette pas une marge en plus sur toute la page*/
 
 .d-justify /*logo entete*/
 {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 /* logo+entête*/
 
 .projet ul
 {
-    list-style: none;
-    margin:0;
+ list-style: none;
+ margin:0;
 }
 
 .projet li
 {
-	float: left;
+  float: right;
 }
-
 
 .active /*pour bouton hebergements*/
 {
-    border-bottom: 2px solid #0065FC !important;	/*pour qu'il y ait un trait bleu foncé au dessus de hebergements*/
-
+ border-top: 2px solid #0065FC !important; /*pour qu'il y ait un trait bleu foncé au dessus de hebergements*/
+ font-size: 1.3rem;
 }
 
 .color-act /*pour bouton activites*/
 {
-	color: #000 !important;
+  color: #000 !important;
+  font-size: 1.3rem;
 }
 
 .color-inscrire /*pour bouton s'inscrire*/
 {
-	font-weight: bold;
-	width: 50%;
-	
-	position: absolute;
-	left: 240px;/* concerne les marges exterieures */
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
-
-
-nav.projet ul
-    {
-    	display: flex;
-    	flex-direction: row-reverse;
-    }
-
-nav ul 
-    {
-        display: block;
-        position: absolute;
-        top: 0px;
-    }
-
-nav ul li:nth-child(1)
-    {
-        display: block;
-        position: absolute;
-        width: 50%;
-        left: 0rem;
-        top: 6rem;
-    }
-
-    nav ul li:nth-child(2)
-    {
-        display: block;
-        position: absolute;
-        width: 50%;
-        left: 250px;
-        top: 6rem;
-    }
-
-
-
+.inscrire-mobile /*n'apparait pas sur le site quand c'est grand écran*/
+{
+  display: none;
+}
 
 nav.projet a:hover/* une couleur se met dès qu'on survol le mot */
 {
-	color: red;
-	background-color: #F2F2F2; /*lorsqu'on passe dessus un encadrement de couleur grise apparait*/
-	border-top: 2px solid #0065FC; /* taille et couleur bleu foncé du haut du cadre*/
+  color: red;
+  background-color: #F2F2F2; /*lorsqu'on passe dessus un encadrement de couleur grise apparait*/
+  border-top: 2px solid #0065FC; /* taille et couleur bleu foncé du haut du cadre*/
 }
 
 nav.projet a /* characteristiques par défaut */
 {
-	display: block;
-	padding: 30px;
-	color: #0065FC;
-	text-decoration: #0065FC;
-	border-top: 2px solid white;
+  display: block;
+  padding: 30px;
+  color: #0065FC;
+  text-decoration: none;
+  border-top: 2px solid white;
 }
-
 
 /*section 1 trouvez votre hébergement*/
 
@@ -755,15 +719,15 @@ nav.projet a /* characteristiques par défaut */
  h1 /*Trouvez votre hébergement*/
 {
 	color: #000000; /*couleur noire*/
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-weight: bold;
 	margin-left: 20px;
-	padding-top: 150px;
+	padding-top: 50px;
 }
 
 p
 {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	margin-left: 20px;
 }
 
@@ -782,7 +746,7 @@ input  /* Marseille, France*/
     width: 220px;
     height: 42px;
     padding-left: 15px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-left: -4px;
 }
@@ -827,7 +791,7 @@ display: none;
     align-items: center;
     margin-right: 10px;
     font-weight: bold; /*ne fonctionne pas*/
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 
 .fi /*bloc : economique familial romantique animaux*/
@@ -858,13 +822,14 @@ display: none;
     color: #0065FC; /*couleur de l'icone*/
     background-color: #DEEBFF; /*couleur du fond du rond*/
     border-radius: 100%;
-    height: 3rem;
-    width: 3rem;
+    height: 4rem;
+    width: 4rem;
 }
 
 .fi span /*concerne les mots : economique familial romantique animaux*/
 {
 	display: flex;
+	font-size: 1.4rem;
     margin: 10px 15px 10px 10px;
 }
 
@@ -883,10 +848,10 @@ i.fas.fa-info /*icone avec plus de 500 logements...*/
     border-radius: 50%;
     padding: 9px;
     color: #0065FC;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 	height: 0.7rem;
     width: 0.7rem;
-    margin-left: 18px;/* concerne les marges exterieures */
+    margin-left: 2px;/* concerne les marges exterieures */
     align-items: center;
 }
 
@@ -907,7 +872,7 @@ i.fas.fa-info /*icone avec plus de 500 logements...*/
 h2 /*hebergements à marseille et Les plus populaires et Activités à Marseille*/
 {
   margin-left: 20px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #000000; /*couleur noire*/
 }
 
@@ -922,7 +887,7 @@ h2 /*hebergements à marseille et Les plus populaires et Activités à Marseille
 
 i.fas.fa-chart-line /*icone plus populaire*/
 {
-	margin-left: 120px; /* concerne les marges exterieures */
+	margin-left: 500px; /* concerne les marges exterieures */
 }
 
 .element-droit /*concerne les elements les plus populaires*/
@@ -934,7 +899,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 	margin-bottom: 37px;
 	margin-top: 30px;
 	box-shadow: 0px 8px 12px #aaa;
-	width: 87%;
+	width: 93%;
 	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
     qui indique un lien,généralement c'est une main.*/
 }
@@ -947,8 +912,8 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .ph /*photos les plus populaires*/
 {    
 	object-fit: cover; /*l'image sera découpée pour s'adapter*/
-    width: 130px;
-    height: 160px;
+    width: 460px;
+    height: 180px;
     border-radius: 0 0 0 10px; /* haut droite bas gauche, enlever px quand c'est 0 */	
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px; 
@@ -959,7 +924,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .hotel /*hotels pour hebergements à Marseille*/
 {
 	color: #000000;/*couleur noire*/ 
-	font-size: 1.2rem;  
+	font-size: 1.9rem;  
 	font-weight: bold;
 	margin-left: 12px; /* concerne les marges exterieures  */
 	margin-top: 12px;
@@ -969,7 +934,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .hotels /*hotels pour les plus populaires*/
 {
 	color: #000000;/*couleur noire*/ 
-	font-size: 1.2rem;  
+	font-size: 1.9rem;  
 	font-weight: bold;
 	margin-left: 12px; /* concerne les marges exterieures  */
 	margin-top: 10px;
@@ -979,7 +944,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .mat /*coupure des noms d'hotel, pour les plus populaires*/
 {
 	color: #000000;/*couleur noire, pour les plus populaires*/ 
-	font-size: 1.2rem;  
+	font-size: 1.9rem;  
 	font-weight: bold;
 	margin-left: 12px;
 	padding-top: 10px;
@@ -988,20 +953,20 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .nuits /*pour les plus populaires*/
 {
 	color: #000000;/*couleur noire*/ 
-	font-size: 1.1rem;
+	font-size: 1.9rem;
 	margin-left: 12px;
 }
 
 .star /*étoiles pour les plus populaires*/
 {
 	margin-left: 12px; /* pour que le block étoiles ait une marge exterieure gauche tout en restant groupé */
-	padding-top: 36px;
+	margin-bottom: 5px;/* concerne les marges exterieures  */
 }
 
 .nuit /*pour hebergements à Marseille*/
 {
 	color: #000000;/*couleur noire*/ 
-	font-size: 1.1rem;
+	font-size: 1.9rem;
 	margin-left: 12px;
 }
 
@@ -1015,13 +980,13 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .blue /*blue stars */
 { 
     color: #0065FC; 
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .grey /*grey stars */
 {
     color:rgb(217,217,217);
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
 
 .habitation /*englobe hebergement à Marseille et ses 6 vignettes hebergement+afficher*/
@@ -1055,7 +1020,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 	border: 6px white solid;
 	border-radius: 20px;/* concerne l'arrondi de l'encadrement */ 
 	margin-bottom: 35px; /* concerne les marges exterieures  haut droite bas gauche, enlever px quand c'est 0 */
-	width: 95%;
+	width: 103%;
 	box-shadow: 0px 8px 12px #aaa;
 	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
     qui indique un lien,généralement c'est une main.*/
@@ -1064,7 +1029,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .photos /*hebergements à marseilles*/
 {  	
   	width: 100%;
-  	height: 140px;
+  	height: 240px;
   	object-fit: cover; /*l'image sera découpée pour s'adapter*/
     border: white solid 0px;
     border-top-right-radius: 10px;
@@ -1076,7 +1041,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .afficher
 {
 	color: #000000;/*couleur noire*/
-	font-size: 1rem;
+	font-size: 1.4rem;
 	font-weight: bold;
 	width: 100%;
 	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
@@ -1095,7 +1060,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 	flex-direction: column;
 	color: #000000;/*couleur noire*/	
 	text-align: left;	
-	width: 100%;
+	width: 105%;
 	margin-left: 20px; /*marges exterieures*/
 	margin-right: 18px;
 }
@@ -1114,8 +1079,8 @@ i.fas.fa-chart-line /*icone plus populaire*/
 
 .phot /*photo elements 10-13*/
 {
-  	width: 360px;
-  	height: 150px;
+  	width: 800px;
+  	height: 250px;
   	object-fit: cover; /*l'image sera découpée pour s'adapter*/   
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;  
@@ -1124,7 +1089,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 .lieu /*noms des lieux pour activites*/
 {
 	color: #000000;/*couleur noire*/ 
-	font-size: 1.1em;  
+	font-size: 1.9em;  
 	font-weight: bold;
 	padding-left: 10px;/* concerne les marges interieures gauche  */
 	padding-top: 10px;
@@ -1144,8 +1109,8 @@ i.fas.fa-chart-line /*icone plus populaire*/
 
 .pho /*photo elements 11-12-14-15*/
 {
-  	width: 360px;
-  	height: 150px;
+  	width: 805px;
+  	height: 250px;
   	object-fit: cover; /*l'image sera découpée pour s'adapter*/   
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;  
@@ -1156,7 +1121,7 @@ i.fas.fa-chart-line /*icone plus populaire*/
 	box-shadow: 0px 8px 12px #aaa;
 	border-radius: 20px;/* concerne l'arrondi de l'encadrement */
 	align-self: baseline;/*placement dans la box*/
-	margin-bottom: 25px;/* concerne les marges exterieures  */
+	margin-bottom: 25px;/* concerne les marges exterieures bas */
 	padding-bottom: 3px;/* concerne  marge interieure bas  */
 	cursor: pointer; /*définit la forme du curseur lorsque le pointeur est au-dessus de l'élément, Le curseur est un pointeur 
     qui indique un lien,généralement c'est une main.*/
@@ -1217,6 +1182,7 @@ footer
 h3 /*A propos et Nos hébergements et Assistance*/
 {
 	color: #000000; /*couleur noire*/
+	font-size: 1.7rem;
 	margin-bottom: 30px;
 }
 
@@ -1283,10 +1249,10 @@ h3 /*A propos et Nos hébergements et Assistance*/
 
 }
 
-
 }
 
-/*Medium devices (tablette, entre 768px and 1200)si la largeur de l'appareil est supérieur à 768px et inférieur à 1200px, appliquez le CSS défini 
+
+/*Medium devices (tablette, entre 1000px and 1200)si la largeur de l'appareil est supérieur à 768px et inférieur à 1200px, appliquez le CSS défini 
 dans ce bloc*/
 @media only screen and (min-width:1000px) and (max-width: 1200px)
 {
